@@ -1,0 +1,57 @@
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h4 class="footer-title">عن المكتبة</h4>
+      <p class="footer-desc">
+        {{ site.description }}
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-title">روابط سريعة</h4>
+      <ul class="footer-links">
+        {% for item in site.data.navigation %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-title">تواصل معنا</h4>
+      <ul class="footer-links">
+        {% if site.contact.whatsapp and site.contact.whatsapp != "" %}
+          <li>
+            <a href="https://wa.me/{{ site.contact.whatsapp }}" target="_blank" rel="noopener">
+              واتساب
+            </a>
+          </li>
+        {% endif %}
+        {% if site.contact.telegram and site.contact.telegram != "" %}
+          <li>
+            <a href="https://t.me/{{ site.contact.telegram }}" target="_blank" rel="noopener">
+              تليجرام
+            </a>
+          </li>
+        {% endif %}
+        {% if site.contact.email and site.contact.email != "" %}
+          <li><a href="mailto:{{ site.contact.email }}">البريد الإلكتروني</a></li>
+        {% endif %}
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      © {{ site.time | date: "%Y" }} — {{ site.title }} · جميع الحقوق محفوظة
+      <br>
+      <span class="footer-author">{{ site.author.name }}</span>
+    </p>
+    <p class="footer-note">
+      «الدال على الخير كفاعله»
+    </p>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="العودة للأعلى">▲</button>
