@@ -4,7 +4,7 @@ title: "البيان الصحيح لمن بدّل دين المسيح — الم
 author: "سيف بن عمران (أبو البراء المصري)"
 category: "الردود والنصرانية الباطله"
 date: 2026-10-16
-cover: ""
+cover: "/assets/covers/deepseek_20261016_72abcb.png"
 pdf_url: "https://drive.google.com/file/d/17HRrOuf7hwFc0XZJB9HI04oj6sIBnlUB/view"
 pages: ""
 size: ""
