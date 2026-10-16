@@ -1,0 +1,69 @@
+---
+layout: default
+permalink: /404.html
+sitemap: false
+---
+
+<div class="not-found-page">
+
+  <div class="not-found-inner">
+    <div class="not-found-code">٤٠٤</div>
+    <h1 class="not-found-title">الصفحة غير موجودة</h1>
+    <p class="not-found-desc">
+      عذرًا، الصفحة التي تبحث عنها غير متوفرة أو ربما تم نقلها.
+      يمكنك العودة للصفحة الرئيسية أو استخدام البحث للوصول لما تريد.
+    </p>
+
+    <div class="not-found-actions">
+      <a href="{{ '/' | relative_url }}" class="btn btn-primary">الرئيسية</a>
+      <a href="{{ '/books/' | relative_url }}" class="btn btn-outline">تصفح الكتب</a>
+      <a href="{{ '/fatwas/' | relative_url }}" class="btn btn-outline">الفتاوى</a>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px 20px;
+}
+
+.not-found-inner {
+  text-align: center;
+  max-width: 560px;
+}
+
+.not-found-code {
+  font-family: var(--font-heading);
+  font-size: clamp(90px, 18vw, 160px);
+  color: var(--gold);
+  line-height: 1;
+  text-shadow: 0 6px 40px var(--gold-glow);
+  margin-bottom: 10px;
+}
+
+.not-found-title {
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 4vw, 38px);
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.not-found-desc {
+  color: var(--text-2);
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+</style>
