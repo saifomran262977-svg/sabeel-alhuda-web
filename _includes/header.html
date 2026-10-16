@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="header-container">
+
+    <a href="{{ '/' | relative_url }}" class="site-brand">
+      <span class="brand-icon">⚔</span>
+      <span class="brand-text">
+        <span class="brand-title">{{ site.title }}</span>
+        <span class="brand-tagline">{{ site.tagline }}</span>
+      </span>
+    </a>
+
+    <button class="menu-toggle" aria-label="فتح القائمة" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <ul>
+        {% for item in site.data.navigation %}
+          <li>
+            <a href="{{ item.url | relative_url }}"
+               {% if page.url == item.url %}class="active"{% endif %}>
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <button class="search-toggle" aria-label="بحث" id="searchToggle">
+      🔍
+    </button>
+
+  </div>
+</header>
+
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-modal">
+    <button class="search-close" id="searchClose" aria-label="إغلاق">✕</button>
+    <h3 class="search-title">ابحث في المكتبة</h3>
+    <input type="text" id="searchInput" class="search-input" placeholder="اكتب اسم كتاب أو فتوى..." autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
