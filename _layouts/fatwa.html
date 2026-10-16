@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<article class="fatwa-page">
+
+  <nav class="breadcrumb" aria-label="مسار التصفح">
+    <a href="{{ '/' | relative_url }}">الرئيسية</a>
+    <span>›</span>
+    <a href="{{ '/fatwas/' | relative_url }}">الفتاوى</a>
+    <span>›</span>
+    <span class="current">{{ page.title | truncate: 40 }}</span>
+  </nav>
+
+  <header class="fatwa-header">
+    <span class="fatwa-badge">فتوى</span>
+    <h1 class="fatwa-page-title">{{ page.title }}</h1>
+
+    {% if page.category %}
+      <p class="fatwa-category">التصنيف: {{ page.category }}</p>
+    {% endif %}
+
+    {% if page.date %}
+      <p class="fatwa-date">{{ page.date | date: "%Y/%m/%d" }}</p>
+    {% endif %}
+  </header>
+
+  {% if page.description %}
+    <div class="fatwa-summary">
+      <strong>ملخص:</strong> {{ page.description }}
+    </div>
+  {% endif %}
+
+  <section class="fatwa-content">
+    {{ content }}
+  </section>
+
+  {% if page.source %}
+    <p class="fatwa-source"><strong>المصدر:</strong> {{ page.source }}</p>
+  {% endif %}
+
+  <div class="share-row">
+    <span class="share-label">شارك الفتوى:</span>
+    <a class="share-btn" target="_blank" rel="noopener"
+       href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}">
+      واتساب
+    </a>
+    <a class="share-btn" target="_blank" rel="noopener"
+       href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}">
+      تويتر
+    </a>
+  </div>
+
+</article>
