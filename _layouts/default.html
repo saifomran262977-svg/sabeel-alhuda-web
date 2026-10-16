@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" dir="{{ site.dir }}">
+<head>
+  {% include head.html %}
+</head>
+<body class="layout-{{ page.layout | default: 'default' }}">
+
+  {% include header.html %}
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+  <script>
+    // ─── قائمة الجوال ───
+    (function() {
+      const toggle = document.getElementById('menuToggle');
+      const nav = document.getElementById('siteNav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+          nav.classList.toggle('open');
+          toggle.classList.toggle('active');
+        });
+      }
+    })();
+
+    // ─── زر العودة للأعلى ───
+    (function() {
+      const btn = document.getElementById('backToTop');
+      if (!btn) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 400) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      });
+      btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+
+</body>
+</html>
