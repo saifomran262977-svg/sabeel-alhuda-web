@@ -1,0 +1,14 @@
+- title: "الرئيسية"
+  url: "/"
+
+- title: "الكتب"
+  url: "/books/"
+
+- title: "الفتاوى"
+  url: "/fatwas/"
+
+- title: "عن الموقع"
+  url: "/about/"
+
+- title: "تواصل معنا"
+  url: "/contact/"
