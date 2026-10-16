@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<article class="page-layout">
+
+  <nav class="breadcrumb" aria-label="مسار التصفح">
+    <a href="{{ '/' | relative_url }}">الرئيسية</a>
+    <span>›</span>
+    <span class="current">{{ page.title }}</span>
+  </nav>
+
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="page-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+  </header>
+
+  <section class="page-content">
+    {{ content }}
+  </section>
+
+</article>
