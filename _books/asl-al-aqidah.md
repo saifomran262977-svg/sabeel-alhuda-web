@@ -4,7 +4,7 @@ title: "أصل العقيدة"
 author: "سيف بن عمران (أبو البراء المصري)"
 category: "العقيدة"
 date: 2026-10-16
-cover: ""
+cover: "/assets/covers/deepseek_20261016_9311ba.png"
 pdf_url: "https://drive.google.com/file/d/1bb6rq4g5V7Ac60JL-zqq03xbXURvbktY/view"
 pages: ""
 size: ""
