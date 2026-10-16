@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+<!-- ═══ قسم الترحيب ═══ -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-tagline">{{ site.tagline }}</p>
+    <p class="hero-desc">{{ site.description }}</p>
+
+    <div class="hero-actions">
+      <a href="{{ '/books/' | relative_url }}" class="btn btn-primary">تصفح الكتب</a>
+      <a href="{{ '/fatwas/' | relative_url }}" class="btn btn-outline">الفتاوى</a>
+    </div>
+  </div>
+
+  <div class="hero-search">
+    {% include search-box.html %}
+  </div>
+</section>
+
+<!-- ═══ التصنيفات ═══ -->
+<section class="section">
+  <div class="section-head">
+    <h2 class="section-title">تصفح الأقسام</h2>
+  </div>
+
+  <div class="categories-grid">
+    <a href="{{ '/books/' | relative_url }}" class="cat-card">
+      <span class="cat-icon">📚</span>
+      <span class="cat-name">الكتب العلمية</span>
+    </a>
+    <a href="{{ '/fatwas/' | relative_url }}" class="cat-card">
+      <span class="cat-icon">⚖</span>
+      <span class="cat-name">الفتاوى</span>
+    </a>
+    <a href="{{ '/books/' | relative_url }}" class="cat-card">
+      <span class="cat-icon">🕌</span>
+      <span class="cat-name">العقيدة</span>
+    </a>
+    <a href="{{ '/books/' | relative_url }}" class="cat-card">
+      <span class="cat-icon">📖</span>
+      <span class="cat-name">التفسير</span>
+    </a>
+    <a href="{{ '/books/' | relative_url }}" class="cat-card">
+      <span class="cat-icon">🕮</span>
+      <span class="cat-name">الحديث</span>
+    </a>
+    <a href="{{ '/books/' | relative_url }}" class="cat-card">
+      <span class="cat-icon">✒</span>
+      <span class="cat-name">اللغة العربية</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ أحدث الكتب ═══ -->
+<section class="section">
+  <div class="section-head">
+    <h2 class="section-title">أحدث الكتب</h2>
+    <a href="{{ '/books/' | relative_url }}" class="section-link">عرض الكل ←</a>
+  </div>
+
+  <div class="books-grid">
+    {% assign latest_books = site.books | sort: 'date' | reverse %}
+    {% for book in latest_books limit: 6 %}
+      {% include book-card.html book=book %}
+    {% endfor %}
+  </div>
+
+  {% if latest_books.size == 0 %}
+    <p class="empty-state">لا توجد كتب بعد. أضف أول كتاب من مجلد <code>_books/</code>.</p>
+  {% endif %}
+</section>
+
+<!-- ═══ أحدث الفتاوى ═══ -->
+<section class="section">
+  <div class="section-head">
+    <h2 class="section-title">أحدث الفتاوى</h2>
+    <a href="{{ '/fatwas/' | relative_url }}" class="section-link">عرض الكل ←</a>
+  </div>
+
+  <div class="fatwas-list">
+    {% assign latest_fatwas = site.fatwas | sort: 'date' | reverse %}
+    {% for fatwa in latest_fatwas limit: 4 %}
+      <a href="{{ fatwa.url | relative_url }}" class="fatwa-item">
+        <h3 class="fatwa-q">{{ fatwa.title }}</h3>
+        {% if fatwa.description %}
+          <p class="fatwa-a">{{ fatwa.description | truncate: 120 }}</p>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+
+  {% if latest_fatwas.size == 0 %}
+    <p class="empty-state">لا توجد فتاوى بعد. أضف أول فتوى من مجلد <code>_fatwas/</code>.</p>
+  {% endif %}
+</section>
+
+<!-- ═══ دعوة للتواصل ═══ -->
+<section class="section cta-section">
+  <div class="cta-inner">
+    <h2>هل لديك سؤال أو استفسار؟</h2>
+    <p>تواصل معنا مباشرة عبر الواتساب لأي استفسار عن الكتب أو الفتاوى.</p>
+    {% if site.contact.whatsapp and site.contact.whatsapp != "" %}
+      <a href="https://wa.me/{{ site.contact.whatsapp }}" target="_blank" rel="noopener" class="btn btn-primary">
+        تواصل عبر واتساب
+      </a>
+    {% endif %}
+  </div>
+</section>
