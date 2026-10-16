@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /search.json
+Disallow: /feed.xml
+Disallow: /404.html
+
+Sitemap: https://saifomran262977-svg.github.io/salil-alsawarim/sitemap.xml
