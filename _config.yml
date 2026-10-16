@@ -1,0 +1,73 @@
+title: "صليل الصوارم"
+tagline: "مكتبة علمية دعوية"
+description: "مكتبة علمية دعوية تضم كتبًا وفتاوى وردودًا علمية لطالب العلم سيف بن عمران (أبو البراء المصري)."
+author:
+  name: "سيف بن عمران (أبو البراء المصري)"
+  short: "أبو البراء المصري"
+
+lang: "ar"
+dir: "rtl"
+timezone: "Africa/Cairo"
+
+url: "https://saifomran262977-svg.github.io"
+baseurl: "/salil-alsawarim"
+
+contact:
+  whatsapp: "201142077109"
+  email: ""
+  telegram: ""
+  twitter: ""
+
+theme_color: "#d4af37"
+theme_color_dark: "#0a0e14"
+
+index_in_search: true
+google_analytics: ""
+google_site_verification: ""
+
+collections:
+  books:
+    output: true
+    permalink: /books/:name/
+  fatwas:
+    output: true
+    permalink: /fatwas/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "book"
+  - scope:
+      path: ""
+      type: "fatwas"
+    values:
+      layout: "fatwa"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .github
+  - .gitignore
