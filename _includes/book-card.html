@@ -1,0 +1,43 @@
+<article class="book-card">
+  <a href="{{ include.book.url | relative_url }}" class="book-card-link">
+
+    <div class="book-cover-wrap">
+      {% if include.book.cover and include.book.cover != "" %}
+        <img src="{{ include.book.cover | relative_url }}"
+             alt="{{ include.book.title }}"
+             class="book-cover"
+             loading="lazy">
+      {% else %}
+        <div class="book-cover book-cover-placeholder">
+          <span>{{ include.book.title | slice: 0, 1 }}</span>
+        </div>
+      {% endif %}
+
+      {% if include.book.category %}
+        <span class="book-badge">{{ include.book.category }}</span>
+      {% endif %}
+    </div>
+
+    <div class="book-info">
+      <h3 class="book-title">{{ include.book.title }}</h3>
+
+      {% if include.book.author %}
+        <p class="book-author">{{ include.book.author }}</p>
+      {% endif %}
+
+      {% if include.book.description %}
+        <p class="book-desc">{{ include.book.description | truncate: 90 }}</p>
+      {% endif %}
+
+      <div class="book-meta">
+        {% if include.book.pages %}
+          <span>{{ include.book.pages }} صفحة</span>
+        {% endif %}
+        {% if include.book.size %}
+          <span>{{ include.book.size }}</span>
+        {% endif %}
+      </div>
+
+    </div>
+  </a>
+</article>
