@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<article class="book-page">
+
+  <nav class="breadcrumb" aria-label="مسار التصفح">
+    <a href="{{ '/' | relative_url }}">الرئيسية</a>
+    <span>›</span>
+    <a href="{{ '/books/' | relative_url }}">الكتب</a>
+    <span>›</span>
+    <span class="current">{{ page.title }}</span>
+  </nav>
+
+  <div class="book-page-grid">
+
+    <!-- غلاف الكتاب -->
+    <aside class="book-page-cover">
+      {% if page.cover and page.cover != "" %}
+        <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" loading="lazy">
+      {% else %}
+        <div class="book-cover book-cover-placeholder big">
+          <span>{{ page.title | slice: 0, 1 }}</span>
+        </div>
+      {% endif %}
+    </aside>
+
+    <!-- تفاصيل الكتاب -->
+    <div class="book-page-body">
+      <h1 class="book-page-title">{{ page.title }}</h1>
+
+      {% if page.author %}
+        <p class="book-page-author">المؤلف: {{ page.author }}</p>
+      {% endif %}
+
+      <div class="book-page-meta">
+        {% if page.category %}
+          <span class="meta-pill">{{ page.category }}</span>
+        {% endif %}
+        {% if page.pages %}
+          <span class="meta-pill">{{ page.pages }} صفحة</span>
+        {% endif %}
+        {% if page.size %}
+          <span class="meta-pill">{{ page.size }}</span>
+        {% endif %}
+        {% if page.date %}
+          <span class="meta-pill">{{ page.date | date: "%Y/%m/%d" }}</span>
+        {% endif %}
+      </div>
+
+      {% if page.description %}
+        <p class="book-page-desc">{{ page.description }}</p>
+      {% endif %}
+
+      <!-- أزرار القراءة والتحميل -->
+      <div class="book-actions">
+        {% if page.pdf_url and page.pdf_url != "" %}
+          <a href="{{ page.pdf_url }}" target="_blank" rel="noopener" class="btn btn-primary">
+            📖 قراءة الكتاب
+          </a>
+          <a href="{{ page.pdf_url }}" download class="btn btn-outline">
+            ⬇ تحميل PDF
+          </a>
+        {% else %}
+          <p class="notice">لم يتم إضافة رابط الكتاب بعد.</p>
+        {% endif %}
+      </div>
+
+      {% if page.tags and page.tags.size > 0 %}
+        <div class="book-tags">
+          {% for tag in page.tags %}
+            <span class="tag">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <!-- المحتوى التفصيلي -->
+  {% if content and content != "" %}
+    <section class="book-content">
+      {{ content }}
+    </section>
+  {% endif %}
+
+  <!-- مشاركة -->
+  <div class="share-row">
+    <span class="share-label">شارك الكتاب:</span>
+    <a class="share-btn" target="_blank" rel="noopener"
+       href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}">
+      واتساب
+    </a>
+    <a class="share-btn" target="_blank" rel="noopener"
+       href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}">
+      تويتر
+    </a>
+    <a class="share-btn" target="_blank" rel="noopener"
+       href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}">
+      فيسبوك
+    </a>
+  </div>
+
+</article>
