@@ -1,53 +1,48 @@
+---
+layout: null
+sitemap: false
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- الصفحات الأساسية -->
   <url>
     <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/</loc>
-    <lastmod>2026-10-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/books/</loc>
-    <lastmod>2026-10-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/fatwas/</loc>
-    <lastmod>2026-10-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/about/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/contact/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
+
+  <!-- الكتب (تلقائي) -->
+  {% for book in site.books %}
   <url>
-    <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/books/asl-al-aqidah/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web{{ book.url }}</loc>
+    <lastmod>{{ book.date | date_to_xmlschema }}</lastmod>
     <priority>0.7</priority>
   </url>
+  {% endfor %}
+
+  <!-- الفتاوى (تلقائي) -->
+  {% for fatwa in site.fatwas %}
   <url>
-    <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/books/albayan-alsahih-1/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web{{ fatwa.url }}</loc>
+    <lastmod>{{ fatwa.date | date_to_xmlschema }}</lastmod>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/fatwas/hukm-tark-al-salah/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/fatwas/hukm-ittiba-al-sufiyya-al-ghulah/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://saifomran262977-svg.github.io/sabeel-alhuda-web/fatwas/hukm-muwalat-al-ashaira-al-maturidiyya/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.7</priority>
-  </url>
+  {% endfor %}
+
 </urlset>
