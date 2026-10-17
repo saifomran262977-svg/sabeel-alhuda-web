@@ -16,7 +16,7 @@ description: "قاموس شامل لأهم المصطلحات الشرعية ف�
 <details class="term-card">
   <summary>{{ term.title }}</summary>
   <div class="term-content">
-    {{ term.content }}
+    {{ term.content | markdownify }}
     <div style="margin-top: 10px;">
       <a href="{{ term.url | relative_url }}" style="font-size: 14px; color: var(--gold); text-decoration: underline;">رابط دائم للمصطلح ←</a>
     </div>
