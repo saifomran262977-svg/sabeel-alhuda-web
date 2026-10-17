@@ -32,7 +32,7 @@ collections:
   fatwas:
     output: true
     permalink: /fatwas/:name/
-    audios:
+  audios:
     output: true
     permalink: /audios/:name/
 defaults:
