@@ -1,7 +1,7 @@
 - title: "الرئيسية"
   url: "/"
 
-- title: "الكتب"
+- title: "المؤلفات العلميه"
   url: "/books/"
 
 - title: "الفتاوى"
@@ -9,9 +9,6 @@
 
 - title: "عن الموقع"
   url: "/about/"
-  
-- title: "المصطلحات"
-  url: "/glossary/"
 
 - title: "تواصل معنا"
   url: "/contact/"
