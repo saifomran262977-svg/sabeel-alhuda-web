@@ -32,9 +32,6 @@ collections:
   fatwas:
     output: true
     permalink: /fatwas/:name/
-  audios:
-    output: true
-    permalink: /audios/:name/
 defaults:
   - scope:
       path: ""
@@ -51,11 +48,6 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-   - scope:
-      path: ""
-      type: "audios"
-    values:
-      layout: "audio"
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
