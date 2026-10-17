@@ -12,8 +12,7 @@ description: "قاموس شامل لأهم المصطلحات الشرعية ف�
   </p>
 </div>
 
-{% assign sorted_terms = site.terms | sort: 'title' %}
-{% for term in sorted_terms %}
+{% for term in site.terms %}
 <details class="term-card">
   <summary>{{ term.title }}</summary>
   <div class="term-content">
