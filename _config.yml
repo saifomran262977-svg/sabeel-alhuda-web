@@ -32,9 +32,6 @@ collections:
   fatwas:
     output: true
     permalink: /fatwas/:name/
-terms:
-    output: true
-    permalink: /terms/:name/
 defaults:
   - scope:
       path: ""
@@ -51,11 +48,6 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-  - scope:
-      path: ""
-      type: "terms"
-    values:
-      layout: "term"
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
