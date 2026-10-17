@@ -9,6 +9,9 @@
 
 - title: "عن الموقع"
   url: "/about/"
+  
+- title: "المصطلحات"
+  url: "/glossary/"
 
 - title: "تواصل معنا"
   url: "/contact/"
