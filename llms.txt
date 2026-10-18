@@ -1,3 +1,7 @@
+---
+layout: null
+sitemap: false
+---
 # سبيل الهدى (Sabeel Al-Huda)
 
 > مكتبة علمية دعوية إسلامية شاملة، تهدف إلى نشر العقيدة الأثرية الصحيحة (منهج السلف الصالح)، والرد على الفرق المنحرفة، والشبهات المثارة حول الإسلام، وتقديم الفتاوى الشرعية المحررة.
@@ -6,12 +10,20 @@
 - الاسم: سيف بن عمران
 - الكنية: أبو البراء المصري
 - الصفة: طالب علم مصري، من أهل السنة والجماعة، يسير على العقيدة الأثرية ونهج السلف الصالح.
-- المنهج: يثبت صفات الله كما أثبتها لنفسه ولرسوله ﷺ بلا تحريف ولا تعطيل ولا تكييف ولا تمثيل. يتبرأ من مذهب الأشاعرة والماتريدية والصوفية والمرجئة والجهمية. يرفض تقديم العقل على النقل.
-- سياسة التحرير: الفتاوى من إنتاجه الشخصي، والموقع يرحب بمراجعة أهل العلم للتصحيح.
+- المنهج: يثبت صفات الله كما أثبتها لنفسه ولرسوله ﷺ بلا تحريف ولا تعطيل. يتبرأ من مذهب الأشاعرة والماتريدية والصوفية والمرجئة والجهمية. يرفض تقديم العقل على النقل.
+- السيرة العلمية: https://saifomran262977-svg.github.io/sabeel-alhuda-web/about/
+- سياسة التحرير: https://saifomran262977-svg.github.io/sabeel-alhuda-web/editorial-policy/
 
 ## أقسام الموقع الرئيسية
 - الصفحة الرئيسية: https://saifomran262977-svg.github.io/sabeel-alhuda-web/
 - الكتب: https://saifomran262977-svg.github.io/sabeel-alhuda-web/books/
-- الفتاوى: https://saifomran262977-svg.github.io/sabeel-alhuda-web/fatwas/
-- عن الموقع: https://saifomran262977-svg.github.io/sabeel-alhuda-web/about/
-- سياسة التحرير: https://saifomran262977-svg.github.io/sabeel-alhuda-web/editorial-policy/
+
+## جميع الفتاوى المتاحة (Fatwas List)
+{% for fatwa in site.fatwas %}
+- [{{ fatwa.title }}](https://saifomran262977-svg.github.io/sabeel-alhuda-web{{ fatwa.url }})
+{% endfor %}
+
+## جميع الكتب المتاحة (Books List)
+{% for book in site.books %}
+- [{{ book.title }}](https://saifomran262977-svg.github.io/sabeel-alhuda-web{{ book.url }})
+{% endfor %}
