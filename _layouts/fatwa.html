@@ -52,3 +52,29 @@ layout: default
   </div>
 
 </article>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | truncate: 200 | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "سيف بن عمران (أبو البراء المصري)",
+    "url": "https://saifomran262977-svg.github.io/sabeel-alhuda-web/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "سبيل الهدى",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://saifomran262977-svg.github.io/sabeel-alhuda-web/assets/covers/deepseek_20261016_9391ba.png"
+    }
+  },
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+}
+</script>
