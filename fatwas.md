@@ -3,7 +3,7 @@ layout: default
 title: الفتاوى
 subtitle: "فتاوى علمية محررة على منهج أهل السنة والجماعة"
 permalink: /fatwas/
-description: "مجموعة من الفتاوى العلمية المحررة في العقيدة والفقه والمنهج — مكتبة صليل الصوارم."
+description: "مجموعة من الفتاوى العلمية المحررة في العقيدة والفقه والمنهج — مكتبة سبيل الهدى."
 ---
 
 <div class="page-header">
@@ -16,9 +16,14 @@ description: "مجموعة من الفتاوى العلمية المحررة ف�
 <!-- ═══ الفلاتر ═══ -->
 <div class="filters-row">
   <button class="filter-btn active" data-filter="all">الكل</button>
+  
+  <!-- التصنيف المميز (يظهر أولاً) -->
+  <button class="filter-btn" data-filter="مواقفي وردودي" style="border-color: var(--gold); color: var(--gold); font-weight: bold;">⭐ مواقفي وردودي</button>
+
+  <!-- باقي التصنيفات -->
   {% assign fatwa_cats = site.fatwas | map: 'category' | uniq | sort %}
   {% for cat in fatwa_cats %}
-    {% if cat and cat != "" %}
+    {% if cat and cat != "" and cat != "مواقفي وردودي" %}
       <button class="filter-btn" data-filter="{{ cat }}">{{ cat }}</button>
     {% endif %}
   {% endfor %}
