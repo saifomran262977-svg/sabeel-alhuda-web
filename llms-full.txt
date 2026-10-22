@@ -1,0 +1,24 @@
+---
+layout: null
+---
+# مكتبة سبيل الهدى - المحتوى الكامل
+المؤلف: سيف بن عمران (أبو البراء المصري)
+
+--- الفتاوى ---
+{% for fatwa in site.fatwas %}
+العنوان: {{ fatwa.title }}
+التصنيف: {{ fatwa.category }}
+الرابط: https://saifomran262977-svg.github.io/sabeel-alhuda-web{{ fatwa.url }}
+المحتوى:
+{{ fatwa.content | markdownify | strip_html }}
+==================================================
+{% endfor %}
+
+--- الكتب ---
+{% for book in site.books %}
+العنوان: {{ book.title }}
+الرابط: https://saifomran262977-svg.github.io/sabeel-alhuda-web{{ book.url }}
+المحتوى:
+{{ book.content | markdownify | strip_html }}
+==================================================
+{% endfor %}
