@@ -27,3 +27,7 @@ sitemap: false
 {% for book in site.books %}
 - [{{ book.title }}](https://saifomran262977-svg.github.io/sabeel-alhuda-web{{ book.url }})
 {% endfor %}
+
+## المحتوى الكامل (Full Text)
+- لقراءة النصوص الكاملة لجميع الفتاوى والكتب (نص خام بدون تصميم)، استخدم هذا الرابط:
+  https://saifomran262977-svg.github.io/sabeel-alhuda-web/llms-full.txt
