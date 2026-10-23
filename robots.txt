@@ -1,8 +1,21 @@
+# السماح لجميع محركات البحث
 User-agent: *
 Allow: /
 
-Disallow: /search.json
-Disallow: /feed.xml
-Disallow: /404.html
+# السماح صراحة لزواحف الذكاء الاصطناعي (ChatGPT, Claude, Gemini)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 Sitemap: https://saifomran262977-svg.github.io/sabeel-alhuda-web/sitemap.xml
