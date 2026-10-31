@@ -101,11 +101,20 @@ layout: default
 <section class="section cta-section">
   <div class="cta-inner">
     <h2>هل لديك سؤال أو استفسار؟</h2>
-    <p>تواصل معنا مباشرة عبر الواتساب لأي استفسار عن الكتب أو الفتاوى.</p>
-    {% if site.contact.whatsapp and site.contact.whatsapp != "" %}
-      <a href="https://wa.me/{{ site.contact.whatsapp }}" target="_blank" rel="noopener" class="btn btn-primary">
-        تواصل عبر واتساب
-      </a>
-    {% endif %}
+    <p>تواصل معنا مباشرة عبر الواتساب أو التليجرام لأي استفسار عن الكتب أو الفتاوى.</p>
+    
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+      {% if site.contact.whatsapp and site.contact.whatsapp != "" %}
+        <a href="https://wa.me/{{ site.contact.whatsapp }}" target="_blank" rel="noopener" class="btn btn-primary">
+          💬 تواصل عبر واتساب
+        </a>
+      {% endif %}
+      
+      {% if site.contact.telegram and site.contact.telegram != "" %}
+        <a href="https://t.me/{{ site.contact.telegram }}" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: #29b6f6; color: #29b6f6;">
+          ✈️ تواصل عبر تليجرام
+        </a>
+      {% endif %}
+    </div>
   </div>
 </section>
