@@ -3,7 +3,7 @@ layout: page
 title: تواصل معنا
 subtitle: "يسعدنا تواصلك لأي استفسار أو سؤال"
 permalink: /contact/
-description: "تواصل مع مكتبة صليل الصوارم عبر الواتساب لأي استفسار عن الكتب أو الفتاوى."
+description: "تواصل معي عبر الواتساب لأي استفسار عن الكتب أو الفتاوى."
 ---
 
 ## نرحب بتواصلك 🌿
@@ -20,10 +20,20 @@ description: "تواصل مع مكتبة صليل الصوارم عبر الوا
 
 ---
 
-<div style="text-align: center; margin: 40px 0;">
-  <a href="https://wa.me/{{ site.contact.whatsapp }}" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 18px; padding: 16px 40px;">
+<div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 40px 0;">
+  
+  <!-- زرار الواتساب -->
+  <a href="https://wa.me/{{ site.contact.whatsapp }}" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 18px; padding: 16px 30px; display: inline-flex; align-items: center; gap: 8px;">
     💬 تواصل عبر واتساب
   </a>
+
+  <!-- زرار التليجرام -->
+  {% if site.contact.telegram and site.contact.telegram != "" %}
+  <a href="https://t.me/{{ site.contact.telegram }}" target="_blank" rel="noopener" class="btn btn-outline" style="font-size: 18px; padding: 16px 30px; display: inline-flex; align-items: center; gap: 8px; border-color: #29b6f6; color: #29b6f6;">
+    ✈️ تواصل عبر تليجرام
+  </a>
+  {% endif %}
+
 </div>
 
 ---
