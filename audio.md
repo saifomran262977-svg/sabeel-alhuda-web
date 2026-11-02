@@ -1,7 +1,7 @@
 ---
 layout: page
 title: الصوتيات
-subtitle: " تلاوات قرآنية ودروس وفتاوى علميه"
+subtitle: "تلاوات قرآنية ودروس وفتاوى علميه"
 permalink: /audio/
 ---
 
@@ -13,12 +13,15 @@ permalink: /audio/
 
 <div style="background: var(--bg-card); border: 1px solid var(--gold); padding: 25px; border-radius: 12px; margin-bottom: 30px;">
   <h2 style="color: var(--gold); font-family: var(--font-sub); font-size: 24px; margin-bottom: 10px;">سورة التوبة</h2>
-  <p style="color: var(--text-2); margin-bottom: 20px;">تلاوة عطرة بصوت القارئ الشاب المجاهد أبو عائشة المصلاوي.</p>
+  <p style="color: var(--text-2); margin-bottom: 20px;">تلاوة عطرة بصوت القارئ الشاب المجاهد أبو عائشة المصلاوي (تقبله الله).</p>
   
-  <!-- مشغل جوجل درايف المدمج -->
-  <iframe src="https://drive.google.com/file/d/1KiR2bZl_uHYESG4KDN2KVd1CJKkBQ6is/preview" width="100%" height="120" frameborder="0" allow="autoplay" style="border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"></iframe>
+  <!-- مشغل الصوت المباشر -->
+  <audio controls style="width: 100%; max-width: 500px; outline: none; margin-bottom: 15px;">
+    <source src="https://archive.org/download/009_20261102/009%20-%20%D8%B3%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D9%88%D8%A8%D8%A9.mp3" type="audio/mpeg">
+    متصفحك لا يدعم تشغيل الصوت.
+  </audio>
   
   <div style="text-align: left;">
-     <a href="https://drive.google.com/uc?export=download&id=1KiR2bZl_uHYESG4KDN2KVd1CJKkBQ6is" target="_blank" class="btn btn-outline" style="font-size: 14px; padding: 8px 20px;">⬇ تحميل التلاوة</a>
+     <a href="https://archive.org/download/009_20261102/009%20-%20%D8%B3%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D9%88%D8%A8%D8%A9.mp3" target="_blank" class="btn btn-outline" style="font-size: 14px; padding: 8px 20px;">⬇ تحميل التلاوة</a>
   </div>
 </div>
