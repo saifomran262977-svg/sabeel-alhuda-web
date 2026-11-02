@@ -6,6 +6,9 @@
 
 - title: "الفتاوى"
   url: "/fatwas/"
+  
+- title: "صوتيات"
+  url: "/audio/"
 
 - title: "عن الموقع"
   url: "/about/"
