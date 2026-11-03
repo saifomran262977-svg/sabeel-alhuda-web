@@ -106,7 +106,13 @@ description: "تعرف على مكتبة سبيل الهدى، وعلى مؤسس
 فمن انتفع بشيء من هذا الموقع، فلا ينسَنا من صالح الدعاء.
 
 ---
-
+ <div style="text-align: center; margin-top: 40px; margin-bottom: 40px; padding: 25px; background: var(--bg-card); border: 1px solid var(--gold); border-radius: var(--radius);">
+  <h3 style="color: var(--gold); margin-bottom: 15px; font-family: var(--font-sub); font-size: 22px;">📚 الأرشيف الرسمي للمؤلف</h3>
+  <p style="color: var(--text-2); margin-bottom: 20px;">تصفح جميع الكتب والمؤلفات الأصلية على منصة الأرشيف العالمي (Archive.org):</p>
+  <a href="https://archive.org/details/@saif_omran/uploads" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 18px; padding: 12px 30px;">
+    زيارة الأرشيف العالمي
+  </a>
+</div>
 <div style="text-align: center; margin-top: 36px;">
   <p style="font-family: var(--font-heading); font-size: 22px; color: var(--gold);">
     وكتبه: {{ site.author.name }}
